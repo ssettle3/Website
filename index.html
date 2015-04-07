@@ -1,0 +1,67 @@
+<!doctype html>
+<html class="no-js" ng-app="Portfolio">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Portfolio</title>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="stylesheet" href="styles/vendor.css">
+
+    <link rel="stylesheet" href="styles/main.css">
+
+    <script src="scripts/vendor/modernizr.js"></script>
+
+    <link href='http://fonts.googleapis.com/css?family=Coda' rel='stylesheet' type='text/css'>
+
+  </head>
+  <body>
+
+    <!-- Header -->
+    <header>
+      <div class="navbar-fixed" ng-controller="MainController">
+        <nav>
+          <div class="nav-wrapper row">
+            <div class="me col s3 m2 l1">
+              <a href="#/"><img class="responsive-img" src="/images/S-logo-w.png" alt=""></a>
+            </div>
+            <div class="nav-links col m6 l9 hide-on-small-only center-align">
+              <ul class="center-align">
+                <li><a ng-click="scrollTo('about')">about</a></li>
+                <li><a ng-click="scrollTo('skills')">skills</a></li>
+                <li><a ng-click="scrollTo('work')">work</a></li>
+                <li><a href="#/resume">resume</a></li>
+                <li><a href="https://ssettle3.wordpress.com/" target="_blank">blog</a></li>
+                <li><a ng-click="scrollTo('contact')">contact</a></li>
+              </ul>
+            </div>
+            <div class="social-links col s8 m4 l2 offset-s1">
+              <ul class="social">
+                <li>
+                  <a href="https://github.com/ssettle3" target="_blank"><i class="fa fa-github"></i></a></li>
+                <li>
+                  <a href="https://www.linkedin.com/in/ssettle/en" target="_blank"><i class="fa fa-linkedin"></i></a>
+                </li>
+                <li>
+                  <a href="https://twitter.com/_ssettle" target="_blank"><i class="fa fa-twitter"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main View -->
+    <main>
+      <div class="portfolio" ng-view></div>
+    </main>
+
+
+    <script src="scripts/vendor.js"></script>
+
+        <script src="scripts/main.js"></script>
+
+</body>
+</html>
