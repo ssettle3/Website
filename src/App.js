@@ -1,26 +1,46 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component, Fragment } from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import styled from "styled-components";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import { NotFound } from "./components/NotFound";
+import { Home } from "./components/Home";
+import { Blog } from "./components/Blog";
+import { Header } from "./components/Header";
+import { Theme } from "./components/Theme";
+import { AboutMe } from "./components/AboutMe";
+import { Contact } from "./components/Contact";
+import { SocialContacts } from "./components/SocialContacts";
+
+const Body = styled.div`
+  padding: 50px;
+
+  @media only screen and (max-width: 600px) {
+    padding: 5px;
+  }
+`;
+
+class App extends Component {
+  render() {
+    return (
+      <Theme>
+        <Router>
+          <Header />
+          <Body>
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route exact path="/experience" component={AboutMe} />
+              <Route exact path="/blog" component={Blog} />
+              <Route exact path="/contact" component={Contact} />
+              <Route component={NotFound} />
+            </Switch>
+          </Body>
+          <Fragment>
+            <SocialContacts />
+          </Fragment>
+        </Router>
+      </Theme>
+    );
+  }
 }
 
 export default App;
