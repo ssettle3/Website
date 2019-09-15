@@ -14,6 +14,10 @@ const TerminalWrapper = styled.div`
   padding-top: 80px;
   font-family: "monaco";
 
+  @media only screen and (max-width: 600px) {
+    padding-top: 0;
+  }
+
   .Typewriter__wrapper {
     color: lightgreen;
     margin-left: 10px;

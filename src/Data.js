@@ -34,7 +34,7 @@ export const CommandData = {
       output: "404-408-9767"
     },
     hobbies: {
-      output: "Working out, Game Development with Unity, Drums"
+      output: "Working out, Game Development with Unity, Playing drums, Movies"
     },
     whoami: {
       output:
@@ -42,13 +42,16 @@ export const CommandData = {
     },
     commands: {
       output:
-        "clear, skills, email, help, whoami, hobbies, phone, employer, github"
+        "clear, skills, email, help, whoami, hobbies, phone, work, github, linkedin"
     },
-    employer: {
-      output: "SalesLoft - www.salesloft.com"
+    work: {
+      output: "Senior Software Engineer @ SalesLoft (www.salesloft.com)"
     },
     github: {
       output: "https://github.com/ssettle3"
+    },
+    linkedin: {
+      output: "https://www.linkedin.com/in/ssettle/"
     }
   }
 };

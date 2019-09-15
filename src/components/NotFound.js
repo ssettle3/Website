@@ -5,6 +5,12 @@ const ImageWrapper = styled.div`
   margin: 50px 0;
   text-align: center;
   width: 100%;
+
+  @media only screen and (max-width: 600px) {
+    img {
+      width: 300px;
+    }
+  }
 `;
 
 const Message = styled.div`
