@@ -1,5 +1,10 @@
 import React, { Component, Fragment } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect
+} from "react-router-dom";
 import styled from "styled-components";
 
 import { NotFound } from "./components/NotFound";
@@ -27,10 +32,11 @@ class App extends Component {
           <Header />
           <Body>
             <Switch>
+              <Redirect from="/website" to="/" />
               <Route exact path="/" component={Home} />
               <Route exact path="/experience" component={AboutMe} />
               <Route exact path="/blog" component={Blog} />
-              <Route exact path="/contact" component={Contact} />
+              {/* <Route exact path="/contact" component={Contact} /> */}
               <Route component={NotFound} />
             </Switch>
           </Body>

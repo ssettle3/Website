@@ -37,9 +37,9 @@ const NavWrapper = styled.div`
 
 const items = [
   { route: "/", title: "Home" },
-  { route: "/experience", title: "Experience" },
+  { route: "/experience", title: "Experience" }
   // { route: "/blog", title: "Blog" },
-  { route: "/contact", title: "Contact" }
+  // { route: "/contact", title: "Contact" }
 ];
 
 const renderItems = () =>

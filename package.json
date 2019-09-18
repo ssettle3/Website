@@ -2,7 +2,11 @@
   "name": "website",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ssettle3.github.io/me",
+  "homepage": "https://ssettle3.github.io/Website",
+  "engines": {
+    "npm": "6.9.0",
+    "node": "11.14.0"
+  },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.21",
     "@fortawesome/free-brands-svg-icons": "^5.10.1",
