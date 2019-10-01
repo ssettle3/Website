@@ -55,7 +55,7 @@ export function Header() {
       <LinkWrapper to="/">
         <ImageWrapper
           width="300px"
-          src="https://scontent.fatl1-1.fna.fbcdn.net/v/t1.0-9/38135324_10155663967971728_9216053451237097472_o.jpg?_nc_cat=100&_nc_oc=AQlIv_pthBVcnu_TcIZGhvr3t_aIjmwR5e0OqTeskQPu2cJIDcgnmxSn9R5SAuFFYWCuTq6Ek_s_hHYTMauT4f3P&_nc_ht=scontent.fatl1-1.fna&oh=10e173e469a02dd77a991d3c7905fff6&oe=5D8ECD2D"
+          src="https://scontent.fatl1-1.fna.fbcdn.net/v/t1.0-9/38135324_10155663967971728_9216053451237097472_o.jpg?_nc_cat=100&_nc_oc=AQlkRhatNZ1WihmiXGUE7rspC2dYLhLf_XbwJLZDeo3bX13GITZZWWaxozWAtTfzR2N6iJnbsue7f0rLn76_u85N&_nc_ht=scontent.fatl1-1.fna&oh=107c080fe33c656cd4d95e4354c46273&oe=5E2D012D"
         />
       </LinkWrapper>
       <NavWrapper>{renderItems()}</NavWrapper>

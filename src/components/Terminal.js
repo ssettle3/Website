@@ -35,7 +35,7 @@ const TerminalBox = styled.div`
   padding: 10px 10px 20px 10px;
 `;
 
-const PromptInput = styled.input`
+const PromptInput = styled.div`
   display: ${props => (props.authenticated ? "visible" : "hidden")};
   background: black;
   pointer-events: none;
@@ -91,6 +91,9 @@ export class Terminal extends Component {
     };
   }
 
+  resetPrompt = () =>
+    (document.querySelector("#command-prompt").innerText = "");
+
   commandOutput = command => CommandData.userCommands[command].output;
 
   throwCommandlError = command => {
@@ -110,10 +113,13 @@ export class Terminal extends Component {
       });
     }
 
-    this.setState({
-      commandLineText: "",
-      history: history
-    });
+    this.setState(
+      {
+        commandLineText: "",
+        history: history
+      },
+      () => this.resetPrompt()
+    );
   };
 
   handleCommand = command => {
@@ -125,10 +131,13 @@ export class Terminal extends Component {
   };
 
   clearHistory = () => {
-    this.setState({
-      history: [],
-      commandLineText: ""
-    });
+    this.setState(
+      {
+        history: [],
+        commandLineText: ""
+      },
+      () => this.resetPrompt()
+    );
   };
 
   getPrompt = command => {
@@ -174,10 +183,13 @@ export class Terminal extends Component {
       class: command === "help" ? "terminal-greeting" : null
     });
 
-    this.setState({
-      history: history,
-      commandLineText: ""
-    });
+    this.setState(
+      {
+        history: history,
+        commandLineText: ""
+      },
+      () => this.resetPrompt()
+    );
   };
 
   onChange = event => {
@@ -186,11 +198,17 @@ export class Terminal extends Component {
     }
 
     const history = this.state.history;
-    const command = event.target.value.trim();
+    const command = event.target.innerText.trim();
 
     if (event.keyCode === 13) {
+      event.preventDefault();
+
       if (!Boolean(command.length)) {
-        history.push({ command: "", output: "", prompt: this.getPrompt() });
+        history.push({
+          command: "",
+          output: "",
+          prompt: this.getPrompt()
+        });
         return this.setState({ history: history });
       }
 
@@ -202,7 +220,7 @@ export class Terminal extends Component {
     }
 
     this.setState({
-      commandLineText: event.target.value
+      commandLineText: command
     });
   };
 
@@ -276,13 +294,11 @@ export class Terminal extends Component {
             {this.state.authenticated && (
               <PromptInput
                 id="command-prompt"
-                autocomplete="lksdjgkhjdfjkg"
+                contentEditable={true}
                 spellCheck="false"
-                type="text"
                 authenticated={this.state.authenticated}
                 value={this.state.commandLineText}
                 onKeyDown={this.onChange}
-                onChange={this.onChange}
               />
             )}
           </Prompt>
