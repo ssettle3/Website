@@ -8,10 +8,10 @@ const getGreeting = () => [
 
 export const CommandData = {
   loadingCommands: {
-    ["ssh stephensettle --lock"]: {
+    "ssh stephensettle --lock": {
       output: ""
     },
-    ["**********"]: {
+    "**********": {
       output: getGreeting()
     }
   },

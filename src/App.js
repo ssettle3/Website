@@ -13,7 +13,6 @@ import { Blog } from "./components/Blog";
 import { Header } from "./components/Header";
 import { Theme } from "./components/Theme";
 import { AboutMe } from "./components/AboutMe";
-import { Contact } from "./components/Contact";
 import { SocialContacts } from "./components/SocialContacts";
 
 const Body = styled.div`
@@ -36,7 +35,6 @@ class App extends Component {
               <Route exact path="/" component={Home} />
               <Route exact path="/experience" component={AboutMe} />
               <Route exact path="/blog" component={Blog} />
-              {/* <Route exact path="/contact" component={Contact} /> */}
               <Route component={NotFound} />
             </Switch>
           </Body>
