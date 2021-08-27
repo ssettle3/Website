@@ -4,7 +4,7 @@ import { darken } from "polished";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faTwitter,
+  faYoutube,
   faGithub,
   faLinkedinIn
 } from "@fortawesome/free-brands-svg-icons";
@@ -45,8 +45,8 @@ export function SocialContacts() {
       <Icon href="https://github.com/ssettle3" target="_blank">
         <FontAwesomeIcon icon={faGithub} />
       </Icon>
-      <Icon href="https://twitter.com/_ssettle" target="_blank">
-        <FontAwesomeIcon icon={faTwitter} />
+      <Icon href="https://www.youtube.com/channel/UCEIfWBUKVtwvEHNpy-OKC_A" target="_blank">
+        <FontAwesomeIcon icon={faYoutube} />
       </Icon>
       <Line />
     </Wrapper>

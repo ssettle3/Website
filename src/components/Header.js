@@ -23,10 +23,11 @@ const LinkWrapper = styled(Link)`
   }
 `;
 
-const ImageWrapper = styled.img`
+const ImageWrapper = styled.div`
   border-radius: 50%;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
-  width: 35px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.08);
+  padding: 10px;
+  font-weight: 800;
 `;
 
 const NavWrapper = styled.div`
@@ -53,10 +54,7 @@ export function Header() {
   return (
     <Wrapper>
       <LinkWrapper to="/">
-        <ImageWrapper
-          width="300px"
-          src="https://scontent.fatl1-1.fna.fbcdn.net/v/t1.0-9/38135324_10155663967971728_9216053451237097472_o.jpg?_nc_cat=100&_nc_oc=AQlkRhatNZ1WihmiXGUE7rspC2dYLhLf_XbwJLZDeo3bX13GITZZWWaxozWAtTfzR2N6iJnbsue7f0rLn76_u85N&_nc_ht=scontent.fatl1-1.fna&oh=107c080fe33c656cd4d95e4354c46273&oe=5E2D012D"
-        />
+        <ImageWrapper>SS</ImageWrapper>
       </LinkWrapper>
       <NavWrapper>{renderItems()}</NavWrapper>
     </Wrapper>
